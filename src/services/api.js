@@ -1,5 +1,5 @@
 // src/services/api.js
-const API_BASE_URL = "https://educore-sigma.vercel.app/api";
+const API_BASE_URL = "https://educore-be.vercel.app";
 
 // Helper untuk menyimpan dan mengambil token
 export const setToken = (token) => {
