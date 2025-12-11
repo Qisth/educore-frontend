@@ -1,5 +1,5 @@
 // src/services/api.js
-const API_BASE_URL = "https://educore-be.vercel.app";
+const API_BASE_URL = "https://educore-be.vercel.app/api";
 
 // Helper untuk menyimpan dan mengambil token
 export const setToken = (token) => {
@@ -19,7 +19,7 @@ const authFetch = async (url, options = {}) => {
   const token = getToken();
   const headers = {
     "Content-Type": "application/json",
-    ...(token && { Authorization: token }),
+    ...(token && { Authorization: `Bearer ${token}` }),
     ...options.headers,
   };
 
