@@ -38,6 +38,7 @@ export default function useStudentProfile() {
           const data = res.data;
           setProfile({
             nama: data.nama || "",
+            kelas: data.kelas || "",
             gender: data.gender || "",
             telepon: data.telepon || "",
             provinsi: data.provinsi_alamat || "",
@@ -79,6 +80,9 @@ export default function useStudentProfile() {
       try {
         await updateProfilSiswa({
           nama: data.nama,
+          kelas: data.kelas,
+          gender: data.gender,
+          telepon: data.telepon,
           provinsiAlamat: data.provinsi,
           kotaAlamat: data.kota,
           alamat: data.alamat,

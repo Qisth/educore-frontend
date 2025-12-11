@@ -75,9 +75,15 @@ export default function useTeacherProfile() {
       try {
         await updateProfilGuru({
           nama: data.nama,
+          gender: data.gender,
+          telepon: data.telepon,
           provinsiAlamat: data.provinsi,
           kotaAlamat: data.kota,
           alamat: data.alamat,
+          sekolahProvinsi: data.sekolahProvinsi,
+          sekolahKota: data.sekolahKota,
+          namaSekolah: data.namaSekolah,
+          tingkat: data.tingkat,
           fotoProfil: data.foto,
         });
       } catch (err) {
