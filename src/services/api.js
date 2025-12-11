@@ -43,6 +43,7 @@ export const loginSiswa = async (email, password) => {
     method: "POST",
     body: JSON.stringify({ email, password }),
   });
+  console.log(res.data);
   if (res.data?.token) {
     setToken(res.data.token);
     localStorage.setItem("role", "siswa");
@@ -58,6 +59,7 @@ export const loginGuru = async (email, password) => {
     method: "POST",
     body: JSON.stringify({ email, password }),
   });
+  console.log(res.data);
   if (res.data?.token) {
     setToken(res.data.token);
     localStorage.setItem("role", "guru");
